@@ -63,3 +63,10 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
 	position: relative;
 	display: block;
 }
+footer {
+	clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}
