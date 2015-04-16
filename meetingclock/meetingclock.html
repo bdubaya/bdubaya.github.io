@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>How much time is your company wasting?</title>
+  <script src="lib/jquery.js"></script>
+  <script src="lib/stopwatch.js"></script>
+  <script src="js/clockstuff.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Procrastitron</h1>
+<h2>How much money is this meeting costing your company?</h2>
+
+<p class="container">
+	<span id="watchDisplay">00:00:00</span>
+	<span>$</span><span id="moneyDisplay">0.00</span>
+</p>
+<p>
+	<input id="start" type="button" value="Start">
+	<input id="stop" style="display:none;" type="button" value="Stop">
+	<input id="reset" type="button" value="Reset">
+</p>
+
+<p id="input">Add an attendee
+	<input id="nameField" placeholder="Name"></input>
+	<input id="salaryField" placeholder="Annual Salary"></input>
+	<button id="add">Add</button>
+</p>
+<table id="wasters">
+	<thead>
+	<tr class="tablehead">
+		<td>Name</td>
+		<td>Salary</td>
+		<td></td>	
+	</tr>
+	</thead>
+	<tbody>
+	
+	</tbody>
+</table>
+
+</body>
+</html>
