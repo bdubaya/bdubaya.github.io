@@ -9,18 +9,20 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>Procrastitron</h1>
-<h2>How much money is this meeting costing your company?</h2>
+<div class="timerStuff">
+	<h1>Procrastitron</h1>
+	<h2>How much is this meeting costing your company?</h2>
 
-<p class="container">
-	<span id="watchDisplay">00:00:00</span>
-	<span>$</span><span id="moneyDisplay">0.00</span>
-</p>
-<p>
-	<input id="start" type="button" value="Start">
-	<input id="stop" style="display:none;" type="button" value="Stop">
-	<input id="reset" type="button" value="Reset">
-</p>
+	<p class="container">
+		<span id="watchDisplay">00:00:00</span>
+		<span id="dollarsign">$</span><span id="moneyDisplay">0.00</span>
+	</p>
+	<p>
+		<input id="start" type="button" value="Start">
+		<input id="stop" style="display:none;" type="button" value="Stop">
+		<input id="reset" type="button" value="Reset">
+	</p>
+</div>
 
 <p id="input">Add an attendee
 	<input id="nameField" placeholder="Name"></input>

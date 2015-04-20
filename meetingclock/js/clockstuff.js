@@ -64,7 +64,6 @@ function getMoney(){ //used to have prevTime as an argument, but then I'm a FUCK
 			amt += cellVal / 52 / 40 / 60 / 60;
 		});
 		var noombro = parseFloat($('#moneyDisplay').text()) + amt;
-		console.log(noombro);
 		document.getElementById('moneyDisplay').innerHTML = noombro.toFixed(2);
 	}
 }
