@@ -8,9 +8,12 @@ $(document).ready(function(){
 		var id = name.replace(/\s/g, '');
 		var sal = $('#salaryField').val();
 		
+		if (id == "" || sal == "")
+			return;
+		
 		var toAdd='<tr class="meeter" id=' + id + '><td>' + name + '</td>' +
 									'<td class="sal">' + sal + '</td>' + 
-									'<td><button class=\'remove\'>Remove</button></td></tr>';
+									'<td><button class=\'remove\'>-</button></td></tr>';
 		
 		$('#wasters > tbody:last').append(toAdd);
 		
