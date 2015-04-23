@@ -83,14 +83,12 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
 }
 table{
 	/*width: 30%; maybe remove*/
-	display: inline-block;
+	display: none;
 }
 td{
 	width: 33%;
 }
-table, tbody{
-	border: 1px solid black;
-}
+
 .timerStuff {
 	background-color: #EBEBE0;
 	width: 35%;
@@ -169,12 +167,31 @@ table, tbody{
 
 #input {
 	font-size: 20px;
+	
 }
 
 #nameField, #salaryField {
 	font-size: 20px;
+	margin-bottom: 15px;
 }
 
 #wasters {
 	font-size: 20px;
+	min-width: 250px;
+}
+
+hr {
+	margin-top: 15px; 
+	width: 33%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+.tablehead {
+	padding: 15px;
+}
+
+.meeter:nth-child(odd) {
+	background: #ebebeb;
 }

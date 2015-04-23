@@ -4,6 +4,8 @@ $(document).ready(function(){
 	
 	
 	$('#add').click(function(){
+		$('#wasters').show();
+		$('#wasters').css("display","inline-block");
 		var name = $('#nameField').val();
 		var id = name.replace(/\s/g, '');
 		var sal = $('#salaryField').val();
@@ -25,6 +27,8 @@ $(document).ready(function(){
 	$(document).on('click', '.remove', function(){
 		var tr = $(this).closest('tr');
 		tr.remove();
+		if ($('#wasters tr').length == 1)
+			$('#wasters').hide();
 	});
 	
 	
