@@ -4,14 +4,16 @@ $(document).ready(function(){
 	
 	
 	$('#add').click(function(){
-		$('#wasters').show();
-		$('#wasters').css("display","inline-block");
+		
 		var name = $('#nameField').val();
 		var id = name.replace(/\s/g, '');
 		var sal = $('#salaryField').val();
 		
 		if (id == "" || sal == "")
 			return;
+		
+//		$('#wasters').show();
+		$('#wasters').css("display","inline-block");
 		
 		var toAdd='<tr class="meeter" id=' + id + '><td>' + name + '</td>' +
 									'<td class="sal">' + sal + '</td>' + 
