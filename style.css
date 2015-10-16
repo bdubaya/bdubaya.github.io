@@ -1,13 +1,21 @@
 * 									{ margin: 0; padding: 0; text-align: center;}
-body								{ font: 14px Century Gothic, Sans-Serif; } 
+body								{ font: 14px Century Gothic, Sans-Serif;} 
 a									{ text-decoration: none; }
 ul									{ list-style: none; }
 p                                   { margin: 15px 0; }
+html{
+	background: url(space.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #FFFFFF;
+}
 h1, h2 {
 	font-weight: normal;
 }
 a {
-	color: #000
+	color: #FFFFFF
 }
 
 /* 
@@ -23,10 +31,10 @@ a {
 
 
 ul.dropdown li                      { float: left; zoom: 1;}
-ul.dropdown a:hover		            { color: #000; }
+ul.dropdown a:hover		            { color: #FFFFFF; }
 ul.dropdown a:active                { color: #ffa500; }
 ul.dropdown li a                    { display: block; padding: 4px 8px; border-right: 1px solid #333;
-	 								  color: #222; }
+	 								  color: #FFFFFF; }
 ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
 ul.dropdown li.hover,
 ul.dropdown li:hover                { background: #F3D673; color: black; position: relative; }
@@ -37,7 +45,7 @@ ul.dropdown li.hover a              { color: black; }
 	LEVEL TWO
 */
 ul.dropdown ul 						{ width: 220px; visibility: hidden; position: absolute; top: 100%; left: 0; }
-ul.dropdown ul li 					{ font-weight: normal; background: #f6f6f6; color: #000; 
+ul.dropdown ul li 					{ font-weight: normal; background: #000000; color: #000; 
 									  border-bottom: 1px solid #ccc; float: none; }
 									  
                                     /* IE 6 & 7 Needs Inline Block */

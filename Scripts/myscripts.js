@@ -3,7 +3,7 @@ var main = function(){
 		smoothHeight: true,
 		slideshowSpeed: 5000
 	});
-	$(function() {
+	/* $(function() {
 		$( "#dialog" ).dialog({
 		  autoOpen: false,
 		  show: {
@@ -17,7 +17,7 @@ var main = function(){
 		});
  
 		
-	});
+	}); */
 	var div = document.getElementsByClassName('card')[0];
 		div.addEventListener('click', function (event) {
 		  $( "#dialog" ).dialog( "open" );
