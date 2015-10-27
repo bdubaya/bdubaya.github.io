@@ -1,7 +1,3 @@
-$(document).ready( function() {
-				$("#head").load("header.html");
-});
-
 var main = function(){
 	
 	$('.flexslider').flexslider({
