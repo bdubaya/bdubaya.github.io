@@ -2,98 +2,24 @@
 <!-- Copyright Bennie Waters 2014 -->
 <head>
 	<title> Webtimes with Bennie</title>
-	
-	
-	<link rel="stylesheet" href="style.css" type="text/css" media="screen, projection"/>
-	
-	<!-- Jquery stuff -->
 	<script type="text/javascript" src="Scripts\jquery.js"></script>
-	<script type="text/javascript" language="javascript" src="Scripts\jquery.dropdown.js"></script>
-	<script type="text/javascript" src="Scripts\myscripts.js"></script>
-
-	<!-- Lightbox scripts for batteries -->
-	<script src="Scripts\lightbox\js\lightbox.js"></script>
-	<link href="Scripts\lightbox\css\lightbox.css" rel="stylesheet"/>
-
-	
-	<!-- Carousel script and css -->	
-	<script src="Scripts\flexslider\jquery.flexslider.js"></script>
-	<link href="Scripts\flexslider\flexslider.css" rel="stylesheet"/>
 	<style>
 	
 		
 	</style>
+	<script>
+		$(document).ready( function() {
+			$("#load_home").on("click", function() {
+				$("#content").load("header.html");
+			});
+		});
+	</script>
 </head>
 
 <body>
-
-	<header>
-		<!-- These first three rows should exist on each page of the site. -->
-		
-			<h1 style="font-size: 30 ">
-				<a href="index.html" style="font-color: black">Webtimes with Bennie</a>
-			</h1>
-		
-		
-			<h2>"He's pretty good at computer." -Bennie's mom</h2>
-		
-		
-		 
-		<!--	<td valign="top" height="10px"> <!-- The bulk of the site content is in the center column -->
-			<nav class="drop" style="margin-bottom:10px">
-				<ul class="dropdown" >
-					<li><a href="#">Bennie: a History</a>
-						<ul class="sub_menu">
-							<li><a href="#">Early Daze</a></li>
-							<li><a href="#">College, vol. 1</a></li>
-							<li><a href="#">College 2: Electric Boogaloo</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Work</a>
-						<ul class="sub_menu">
-							<li><a href="#">"The Best Referee Ever"</a></li>
-							<li><a href="#">Databases WOW!</a></li>
-							<li><a href="#">Enter the Adult</a></li>
-							<li><a href="#">#Teens in the Mist</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Fun?</a>
-						<ul class="sub_menu">
-							<li><a href="sports.html">Sportball</a></li>
-							<li><a href="#">Databases WOW!</a></li>
-							<li><a href="#">Enter the Adult</a></li>
-							<li><a href="#">#Teens in the Mist</a></li>
-						</ul>
-					</li>
-					<li><a href="#">B-B-B-Bonus</a>
-						
-					</li>
-					<li><a href="contact.html">Contact, etc.</a>
-						<ul class="sub_menu">
-							<li><a href="contact.html">Abra-abra-cadabra. I wanna reach out and grab ya</a></li>
-							<li><a id="show_fig1" data-lightbox="fig1" href="Images\fig1.png" 
-								data-title="Fig 1: Eating One Battery">Helpful Information</a></li>
-							<li><a id="show_fig2" data-lightbox="fig2" href="Images\fig2.png"
-								data-title="Fig 2: Eating Five Batteries">More Helpful Information</a></li>
-						</ul>
-					</li>
-				</ul>	
-			</nav>
-	</header>
-	<h3>Wouldn't it be great if this page had content, right? OH WELL</h3>
-	
-	
-	<div id="backlink"><a href="index.html">Back</a></div>
-	
-	
-		
-	
-	<div class="social-media">
-	<!--	<td style="text-align:center" valign="bottom"colspan="3"> -->
-			<a href="http://www.twitter.com/bennie_waters"><img src="Images\twitter.png" alt="throw up on my twitter feed" width="42" height="42"></a>
-			<a href="http://www.facebook.com/bennie.waters"><img src="Images\facebook.png" alt="throw up on my facebook wall" width="42" height="42"></a>
-			<a href="http://www.linkedin.com/pub/bennie-waters/1b/86b/949"><img src="Images\linkedin.png" alt="give me a job" width="42" height="42"></a>
-			<a href="mailto:waters.bennie@gmail.com?Subject=Hey,%20jerk" target="_top"><img src="Images\gmail.png" alt="puke in my inbox" width="42" height="42"></a>
+	<div id="topBar">
+		<a href ="#" id="load_home"> HOME </a>
 	</div>
-	
+	<div id ="content"></div>
+
 </body>
