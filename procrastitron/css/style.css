@@ -1,13 +1,13 @@
 * 									{ margin: 0; padding: 0; text-align: center;}
 body								{ font: 14px Century Gothic, Sans-Serif;}
 p                                   { margin: 15px 0; }
-h1, h2 {
+h1#title, h2#subtitle {
 	font-weight: normal;
 }
-h1 {
+h1#title {
 	font-size: 50px;
 }
-h2 {
+h2#subtitle {
 	font-size: 25px;
 }
 
@@ -20,7 +20,6 @@ td{
 }
 
 .timerStuff {
-	background-color: #EBEBEB;
 	width: 35%;
 	margin-left: auto;
 	margin-right: auto;
@@ -123,11 +122,13 @@ hr {
 }
 
 .meeter:nth-child(odd) {
-	background: #EBEBEB;
+	
 }
 
 .footer {
-	color: grey;
+	color: white;
 	margin-top: 15px;
-	
+}
+.footer a {
+	color: orange;
 }
