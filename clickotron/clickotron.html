@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="app">
 <head>
   <meta charset="UTF-8">
-  <title>How much time is your company wasting?</title>
+  <title>Can you be the ultimate click man?</title>
   <script src="lib/jquery.js"></script>
   <script src="lib/stopwatch.js"></script>
-  <script src="js/clockstuff.js"></script>
+  <script src="lib/angular.js"></script>
+  <script src="js/myscripts.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -43,44 +44,43 @@
 	</header>
 
 <body>
-<div class="timerStuff">
-	<h1 id="title">Procrastitron</h1>
-	<h2 id="subtitle">How much is this meeting costing your company?</h2>
+	<div id="frame" ng-controller="StoreController as store">
+		<table id="buyables" >
+			<tr>
+				<td>Item</td>
+				<td>Price</td>
+				<td>Quantity</td>
+			</tr>
+			<tr ng-repeat="product in store.products">
+				<td> <button id={{product.name}} ng-click="increment(product)">{{product.name}}</button></td>
+				<td> {{product.price}} </td>
+				<td> {{product.quantity}} </td>
+			</tr>
+		</table>	
+		
+		
+		
+		<div class="timerStuff" >
+			<h1 id="title">Clickotron</h1>
+			<h2 id="subtitle">You're a winner!</h2>
 
-	<p class="container">
-		<span id="watchDisplay">00:00:00</span>
-		<span id="dollarsign">$</span><span id="moneyDisplay">0.00</span>
-	</p>
-	<p>
-		<input id="start" type="button" value="Start">
-		<input id="stop" style="display:none;" type="button" value="Stop">
-		<input id="reset" type="button" value="Reset">
-	</p>
-</div>
-
+			<p class="container">
+				<span id="watchDisplay">00:00:00</span>
+				<span id="dollarsign">$</span><span id="moneyDisplay">{{store.cash}}</span>
+			</p>
+			<p>
+				<input id="start" type="button" value="Start" ng-click="startClick()">
+				<input id="stop" style="display:none;" type="button" value="Stop" ng-click="stopClick()">
+				<input id="reset" type="button" value="Reset" ng-click="resetClick(store)">
+			</p>
+		</div>
+	</div>
 <hr/>
 
-<div id="inputs">Add an attendee:
-	<input type="text" id="nameField" placeholder="Name"></input>
-	<input type="text" id="salaryField" placeholder="Approx. Annual Salary"></input>
-	<button id="add">&#43</button>
-</div>
-<table id="wasters" cellspacing="0">
-	<thead>
-	<tr>
-		<td class="tablehead">Name</td>
-		<td class="tablehead">Salary</td>
-		<td></td>	
-	</tr>
-	</thead>
-	<tbody>
-	
-	</tbody>
-</table>
 
 <hr style="margin-top: 15px"/>
 
-<div class="footer">
+<div class="feet">
 	<p>&copy; Bennie Waters 2015 - Idea stolen shamelessly from Brandon Knight's <a href="http://mrbrandonknight.com/procrastinate.html"> Procrastinator.</a></p>
 	<p>Stopwatch by <a href="http://www.seph.dk/blog/projects/javascript-stopwatch-class/"> Seph Soliman</a></p>
 </div>

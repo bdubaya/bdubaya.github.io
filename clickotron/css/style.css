@@ -1,0 +1,51 @@
+* 									{ margin: 0; padding: 0; text-align: center;}
+body								{ font: 14px Century Gothic, Sans-Serif;}
+p                                   { margin: 15px 0; }
+h1#title, h2#subtitle {
+	font-weight: normal;
+}
+h1#title {
+	font-size: 50px;
+}
+h2#subtitle {
+	font-size: 25px;
+}
+
+td{
+	font-size: 25px;
+	margin-right: 25px;
+}
+
+#frame{
+	/*margin-top: 100px;*/
+	width: 900px;
+	height: 600px;
+	background-color: blue;
+	border-radius: 25px;
+	display: inline-block;
+}
+
+hr {
+	margin-top: 15px; 
+	width: 33%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+.tablehead {
+	padding: 15px;
+}
+
+.meeter:nth-child(odd) {
+	
+}
+
+.feet {
+	color: white;
+	margin-top: 15px;
+	
+}
+.feet a {
+	color: orange;
+}
