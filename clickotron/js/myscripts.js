@@ -30,33 +30,28 @@ $(document).ready(function(){
 	var app = angular.module('app', []);
 	var gems = [{ name: 'Intern', price: 1.00, quantity: 1, value: 1},
 		{name: 'Entry-Level', price: 20.00, quantity: 0, value: 15}];
+	var money = 0;
 	
 	app.controller('StoreController', function($scope){
 		
-		this.cash = 0;
 		this.products = gems;
-		
+		this.cash = money;
 		
 		//function increment(){
 		$scope.increment = function(item){
 			item.quantity++;
 		};
 		
-		$scope.getMoney = function() {
-			if (watchOn){
-			var table = $('#wasters');//TODO: change this to angular products
-			
-			var interval = 1000;
-			var currMoney = 0;
-			var amt = 0;
-			
-			$('.sal').each(function(){
-				cellVal = parseInt($(this).text());
-				amt += cellVal / 52 / 40 / 60 / 60;
+		$scope.getMoney = function(store) {
+			$scope.$apply(function(){
+				if (watchOn){
+					gems.forEach(function(gem){
+						var value = gem.value * gem.quantity;
+						store.cash += value;
+					});
+				}
 			});
-			var noombro = parseFloat($('#moneyDisplay').text()) + amt;
-			this.cash = noombro.toFixed(2);
-			}
+			
 		};
 	
 		$scope.startClick = function(){
@@ -76,9 +71,8 @@ $(document).ready(function(){
 		$scope.resetClick = function(store){
 			myWatch.reset();
 			myWatch.onTick();
-			this.cash++;
 		};
-		setInterval(this.getMoney, 1000);
+		setInterval( function() {$scope.getMoney($scope.store)}, 1000);
 	
 	});
 	
