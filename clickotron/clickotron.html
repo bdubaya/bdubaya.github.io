@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Can you be the ultimate click man?</title>
   <script src="lib/jquery.js"></script>
+  <script src="lib/jquery-ui.js"></script>
   <script src="lib/stopwatch.js"></script>
   <script src="lib/angular.js"></script>
   <script src="js/myscripts.js"></script>
@@ -53,7 +54,7 @@
 			</tr>
 			<tr ng-repeat="product in store.products">
 				<td> <button id={{product.name}} ng-click="increment(product)">{{product.name}}</button></td>
-				<td> {{product.price}} </td>
+				<td id="{{product.name}}-price"> {{product.price}} </td>
 				<td> {{product.quantity}} </td>
 			</tr>
 		</table>	

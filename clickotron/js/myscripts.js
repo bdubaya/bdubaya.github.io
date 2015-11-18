@@ -1,30 +1,6 @@
 var watchOn = false;
 this.myWatch = new Stopwatch(updatedisplay, 50);
-$(document).ready(function(){
-	/*
-	var myWatch = new Stopwatch(updatedisplay, 50);
-	
-	$('#start').click(function(){
-		myWatch.start();
-		$(this).toggle();
-		$('#stop').show();
-		watchOn = true;
-	});
-	$('#stop').click(function(){
-		myWatch.stop();
-		$(this).toggle();
-		$('#start').show();
-		watchOn = false;
-	});
-	$('#reset').click(function(){
-		myWatch.reset();
-		myWatch.onTick();
-		$('#moneyDisplay').text("0.00");
-	});
-	var prevTime = 0;
-	setInterval(getMoney, 1000);
-	*/
-});
+
 
 (function(){
 	var app = angular.module('app', []);
@@ -44,6 +20,11 @@ $(document).ready(function(){
 				item.price++;
 			}else {
 				//do some cool jquery shit on the price. BRAAAAP: "not enough money"
+				//$('#' + item.name + '-price').animate({color: "white"}, 500);
+				$('#' + item.name + '-price').animate({color: "red"}, 100 )
+											.effect("shake",{distance:1}, "fast")
+											.animate({color: "white"}, 100)
+											.dequeue();
 			}
 		};
 		
@@ -91,23 +72,3 @@ function updatedisplay(watch) {
 }
 
 
-
-/*
-function getMoney(){ //used to have prevTime as an argument, but then I'm a FUCKING CLOD
-	if (watchOn){
-		var table = $('#wasters');
-		
-		var interval = 1000;
-		var currMoney = 0;
-		var amt = 0;
-		
-		
-		$('.sal').each(function(){
-			cellVal = parseInt($(this).text());
-			amt += cellVal / 52 / 40 / 60 / 60;
-		});
-		var noombro = parseFloat($('#moneyDisplay').text()) + amt;
-		this.cash = noombro.toFixed(2);
-	}
-}
-*/
