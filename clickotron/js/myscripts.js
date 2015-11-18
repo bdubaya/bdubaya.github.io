@@ -39,20 +39,23 @@ $(document).ready(function(){
 		
 		//function increment(){
 		$scope.increment = function(item){
-			item.quantity++;
+			if (item.price <= $scope.store.cash)
+				item.quantity++;
 		};
 		
-		$scope.getMoney = function(store) {
+		
+		$scope.getMoney = function() {
 			$scope.$apply(function(){
 				if (watchOn){
 					gems.forEach(function(gem){
 						var value = gem.value * gem.quantity;
-						store.cash += value;
+						$scope.store.cash += value;
 					});
 				}
 			});
-			
 		};
+		
+		
 	
 		$scope.startClick = function(){
 			myWatch.start();
@@ -68,7 +71,7 @@ $(document).ready(function(){
 			watchOn = false;
 		};
 		
-		$scope.resetClick = function(store){
+		$scope.resetClick = function(){
 			myWatch.reset();
 			myWatch.onTick();
 		};
