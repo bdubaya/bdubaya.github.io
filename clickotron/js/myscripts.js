@@ -37,10 +37,14 @@ $(document).ready(function(){
 		this.products = gems;
 		this.cash = money;
 		
-		//function increment(){
 		$scope.increment = function(item){
-			if (item.price <= $scope.store.cash)
+			if (item.price <= $scope.store.cash){
 				item.quantity++;
+				$scope.store.cash -= item.price;
+				item.price++;
+			}else {
+				//do some cool jquery shit on the price. BRAAAAP: "not enough money"
+			}
 		};
 		
 		
