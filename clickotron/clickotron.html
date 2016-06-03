@@ -46,26 +46,28 @@
 	</header>
 
 <body>
-	<div id="frame" ng-controller="StoreController as store">
-		<table id="buyables" >
-			<tr>
-				<td>Item</td>
-				<td>Price</td>
-				<td>Quantity</td>
-			</tr>
-			<tr ng-repeat="product in store.products">
-				<td> <button id={{product.name}} ng-click="increment(product)">{{product.name}}</button></td>
-				<td id="{{product.name}}-price"> {{product.price}} </td>
-				<td> {{product.quantity}} </td>
-			</tr>
-		</table>	
-		
-		
-		
-		<div class="timerStuff" >
-			<h1 id="title">Clickotron</h1>
+<h1 id="title">Clickotron</h1>
 			<h2 id="subtitle">Obviously under construction!</h2>
 
+	<div id="frame" ng-controller="StoreController as store">
+		<div id="gameStuff">
+			<table id="buyables">
+				<tr>
+					<td>Item</td>
+					<td>Price</td>
+					<td>Quantity</td>
+				</tr>
+				<tr ng-repeat="product in store.products">
+					<td> <img src={{product.pic}} id={{product.name}} ng-click="increment(product)" class="empPic"></img></td>
+					<td id="{{product.name}}-price" style="overflow: hidden" >{{product.price}}</td>
+					<td> {{product.quantity}} </td>
+				</tr>
+			</table>	
+			
+			<input id="funButt" type="image" src="images/button.png" ng-click="buttPress()" ></input>  
+		</div>
+		
+		<div class="timerStuff" >
 			<p class="container">
 				<span id="watchDisplay">00:00:00</span>
 				<span id="dollarsign">$</span><span id="moneyDisplay">{{store.cash}}</span>
@@ -83,7 +85,7 @@
 <hr style="margin-top: 15px"/>
 
 <div class="feet">
-	<p>&copy; Bennie Waters 2015 - Idea stolen shamelessly from Brandon Knight's <a href="http://mrbrandonknight.com/procrastinate.html"> Procrastinator.</a></p>
+	<p>&copy; Bennie Waters 2015</p>
 	<p>Stopwatch by <a href="http://www.seph.dk/blog/projects/javascript-stopwatch-class/"> Seph Soliman</a></p>
 </div>
 <div class="social-media footer">
