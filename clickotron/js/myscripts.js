@@ -4,12 +4,13 @@ this.myWatch = new Stopwatch(updatedisplay, 50);
 
 (function(){
 	var app = angular.module('app', []);
-	var gems = [{ name: 'Intern', price: 1.00, quantity: 0, value: 1, pic: 'images/intern.png'},
-		{name: 'Entry-Level', price: 20.00, quantity: 0, value: 15, pic: 'images/entry-level.png'},
-		{name: 'Associate', price: 100, quantity: 0, value: 75, pic: 'images/associate.png'},
-		{name: 'Senior', price: 100, quantity: 0, value: 75, pic: 'images/senior.png'},
-		{name: 'Executive', price: 100, quantity: 0, value: 75, pic: 'images/executive.png'},
-		{name: 'Board-Member', price: 100, quantity: 0, value: 75, pic: 'images/board-member.png'}];
+	var gems = [{ name: 'Spoole', price: 1.00, quantity: 0, value: 1, pic: 'images/spoole.png'},
+		{name: 'Adam', price: 20.00, quantity: 0, value: 15, pic: 'images/adam.png'},
+		{name: 'James', price: 100, quantity: 0, value: 75, pic: 'images/james.png'},
+		{name: 'Bruce', price: 100, quantity: 0, value: 75, pic: 'images/bruce.png'},
+		{name: 'Lawrence', price: 100, quantity: 0, value: 75, pic: 'images/lawrence.png'},
+		{name: 'Benson', price: 100, quantity: 0, value: 75, pic: 'images/benson.png'},
+		{name: 'Tyrone', price: 100, quantity: 0, value: 75, pic: 'images/tyrone.png'}];
 	var money = 0;
 	
 	app.controller('StoreController', function($scope){
