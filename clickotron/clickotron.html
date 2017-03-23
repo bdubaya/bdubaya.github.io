@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Can you be the ultimate click man?</title>
+  <link rel="icon" type="image/png" href="\favicomatic\favicon-32x32.png" sizes="32x32" />
   <script src="lib/jquery.js"></script>
   <script src="lib/jquery-ui.js"></script>
   <script src="lib/stopwatch.js"></script>
@@ -10,90 +11,58 @@
   <script src="js/myscripts.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="../style.css">
+  <script>
+  $(function(){
+    $("#header").load("../header.html");
+    $("#footer").load("../footer.html");
+  });
+  </script>
 </head>
 
-<header>
-		<!-- These first three rows should exist on each page of the site. -->
-			<h1 style="font-size: 30 ">
-				<a href="..\index.html" style="font-color: black">Webtimes with Bennie</a>
-			</h1>
-			<h2>"He's pretty good at computer." -Bennie's mom</h2>
-			<nav class="drop" style="margin-bottom:10px">
-				<ul class="dropdown" >
-					<li><a href="#">Code Stuff!</a>
-						<ul class="sub_menu">
-							<li><a href="..\procrastitron\procrastitron.html">The Procrastitron</a></li>
-							<li><a href="..\clickotron\clickotron.html">Clickotron</a></li>
-							<li><a href="..\temp.html">Enter the Bennie</a></li>
-						</ul>
-					</li>
-					<li><a href="..\gallery.html">Gallery?</a>
-						
-					</li>
-					<li><a href="..\contact.html">Contact, etc.</a>
-						<ul class="sub_menu">
-							<li><a href="..\contact.html">Jeez, how do I find this guy?</a></li>
-							<!--
-							<li><a id="show_fig1" data-lightbox="fig1" href="Images\fig1.png" 
-								data-title="Fig 1: Eating One Battery">Helpful Information</a></li>
-							<li><a id="show_fig2" data-lightbox="fig2" href="Images\fig2.png"
-								data-title="Fig 2: Eating Five Batteries">More Helpful Information</a></li>
-							-->
-						</ul>
-					</li>
-				</ul>	
-			</nav>
-	</header>
-
 <body>
-<h1 id="title">Clickhaus</h1>
-			<h2 id="subtitle">Obviously under construction!</h2>
+  <div id="header"></div>
+  <h1 id="title">Clickhaus</h1>
+  <h2 id="subtitle">Obviously under construction!</h2>
 
-	<div id="frame" ng-controller="StoreController as store">
-		<div id="gameStuff">
-			<table id="buyables">
-				<tr>
-					<td>Item</td>
-					<td>Price</td>
-					<td>Quantity</td>
-				</tr>
-				<tr ng-repeat="product in store.products">
-					<td> <img src={{product.pic}} id={{product.name}} ng-click="increment(product)" class="empPic"></img></td>
-					<td id="{{product.name}}-price" style="overflow: hidden" >{{product.price}}</td>
-					<td> {{product.quantity}} </td>
-				</tr>
-			</table>	
-			
-			<input id="funButt" type="image" src="images/button.png" ng-click="buttPress()" ></input>  
-		</div>
-		
-		<div class="timerStuff" >
-			<p class="container">
-				<span id="watchDisplay">00:00:00</span>
-				<span id="dollarsign">$</span><span id="moneyDisplay">{{store.cash}}</span>
-			</p>
-			<p>
-				<input id="start" type="button" value="Start" ng-click="startClick()">
-				<input id="stop" style="display:none;" type="button" value="Stop" ng-click="stopClick()">
-				<input id="reset" type="button" value="Reset" ng-click="resetClick(store)">
-			</p>
-		</div>
-	</div>
-<hr/>
+  <div id="frame" ng-controller="StoreController as store">
+    <div id="gameStuff">
+      <table id="buyables">
+        <tr>
+          <td>Item</td>
+          <td>Price</td>
+          <td>Quantity</td>
+        </tr>
+        <tr ng-repeat="product in store.products">
+          <td> <img src={{product.pic}} id={{product.name}} ng-click="increment(product)" class="empPic"></img></td>
+          <td id="{{product.name}}-price" style="overflow: hidden" >{{product.price}}</td>
+          <td> {{product.quantity}} </td>
+        </tr>
+      </table>
+
+      <input id="funButt" type="image" src="images/button.png" ng-click="buttPress()" ></input>
+    </div>
+
+    <div class="timerStuff" >
+      <p class="container">
+        <span id="watchDisplay">00:00:00</span>
+        <span id="dollarsign">$</span><span id="moneyDisplay">{{store.cash}}</span>
+      </p>
+      <p>
+        <input id="start" type="button" value="Start" ng-click="startClick()">
+        <input id="stop" style="display:none;" type="button" value="Stop" ng-click="stopClick()">
+        <input id="reset" type="button" value="Reset" ng-click="resetClick(store)">
+      </p>
+    </div>
+  </div>
+  <hr/>
 
 
-<hr style="margin-top: 15px"/>
+  <hr style="margin-top: 15px"/>
 
-<div class="feet">
-	<p>&copy; Bennie Waters 2015</p>
-	<p>Stopwatch by <a href="http://www.seph.dk/blog/projects/javascript-stopwatch-class/"> Seph Soliman</a></p>
-</div>
-<div class="social-media footer">
-	<!--	<td style="text-align:center" valign="bottom"colspan="3"> -->
-			<a href="http://www.twitter.com/bennie_waters"><img src="..\Images\twitter.png" alt="throw up on my twitter feed" width="42" height="42"></a>
-			<a href="http://www.facebook.com/bennie.waters"><img src="..\Images\facebook.png" alt="throw up on my facebook wall" width="42" height="42"></a>
-			<a href="http://www.linkedin.com/pub/bennie-waters/1b/86b/949"><img src="..\Images\linkedin.png" alt="give me a job" width="42" height="42"></a>
-			<a href="mailto:waters.bennie@gmail.com?Subject=Hey,%20jerk" target="_top"><img src="..\Images\gmail.png" alt="puke in my inbox" width="42" height="42"></a>
-	</div>
+  <div class="feet">
+    <p>&copy; Bennie Waters 2015</p>
+    <p>Stopwatch by <a href="http://www.seph.dk/blog/projects/javascript-stopwatch-class/"> Seph Soliman</a></p>
+  </div>
+  <div id="footer"></div>
 </body>
 </html>
