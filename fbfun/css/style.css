@@ -1,0 +1,134 @@
+* 									{ margin: 0; padding: 0; text-align: center;}
+body								{ font: 14px Century Gothic, Sans-Serif;}
+p                                   { margin: 15px 0; }
+h1#title, h2#subtitle {
+	font-weight: normal;
+}
+h1#title {
+	font-size: 50px;
+}
+h2#subtitle {
+	font-size: 25px;
+}
+
+table{
+	/*width: 30%; maybe remove*/
+	display: none;
+}
+td{
+	width: 33%;
+}
+
+.timerStuff {
+	width: 35%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1%;
+	border-radius: 25px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+#watchDisplay {
+	font-size: 25px;
+	padding-right: 50px;
+	float: left;
+	margin-left: 25%;
+}
+
+#moneyDisplay {
+	font-size: 25px;
+	float: right;
+	margin-right: 25%;
+	padding-left: 0;
+}
+#dollarsign {
+	font-size: 25px;
+	padding-right: 0;
+}
+#start, #stop, #reset {
+  border-radius: 10px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  outline: none;
+}
+
+#start {
+	background-color: #32CD32;
+	margin-right: 25px;
+}
+
+#stop {
+	background-color: #32CD32;
+	margin-right: 25px;
+}
+
+#reset {
+	background-color: #DB2929;
+}
+
+#start:hover, #stop:hover {
+  background: #249C24;
+  text-decoration: none;
+}
+
+#reset:hover {
+	background: #A32121;
+}
+#add, .remove {
+	display:inline;
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+    color:#f5f5f5;
+    background: #464646;
+    font-size:20px;
+    font-weight:bold;
+	outline: none;
+}
+
+#add:hover, .remove:hover {
+	background: #262626;
+}
+
+#inputs {
+	font-size: 20px;
+	margin-top: 25px;
+}
+
+#nameField, #salaryField {
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+#wasters {
+	font-size: 20px;
+	min-width: 250px;
+}
+
+hr {
+	margin-top: 15px; 
+	width: 33%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+.tablehead {
+	padding: 15px;
+}
+
+.meeter:nth-child(odd) {
+	
+}
+
+.footer {
+	color: white;
+	margin-top: 15px;
+}
+.footer a {
+	color: orange;
+}
